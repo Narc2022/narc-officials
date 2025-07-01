@@ -1,11 +1,9 @@
 from django.db import models
 
 # Create your models here.
-from django.db import models
 
 
-# Create your models here.
-class Employee(models.Model):
-    fullname = models.CharField(max_length=100)
-    emp_code = models.CharField(max_length=3)
-    mobile = models.CharField(max_length=15)
+class Cars(models.Model):
+    car_name = models.CharField(max_length=100)
+    car_version = models.CharField(max_length=3)
+    car_model = models.CharField(max_length=30)
