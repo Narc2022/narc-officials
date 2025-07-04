@@ -7,24 +7,24 @@ from rest_framework.response import Response
 from rest_framework import status
 
 
-class CarViewset(APIView):
+class CarsViewset(APIView):
     def get(self, request, id=None):
         if id:
-            item = models.Employee.objects.get(id=id)
-            serializer = serializers.EmployeeSerializer(item)
+            item = models.Cars.objects.get(id=id)
+            serializer = serializers.CarsSerializer(item)
             return Response(
                 {"status": "success", "data": serializer.data},
                 status=status.HTTP_200_OK,
             )
 
-        items = models.Employee.objects.all()
-        serializer = serializers.EmployeeSerializer(items, many=True)
+        items = models.Cars.objects.all()
+        serializer = serializers.CarsSerializer(items, many=True)
         return Response(
             {"status": "success", "data": serializer.data}, status=status.HTTP_200_OK
         )
 
     def post(self, request):
-        serializer = serializers.EmployeeSerializer(data=request.data)
+        serializer = serializers.CarsSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(
@@ -38,10 +38,8 @@ class CarViewset(APIView):
             )
 
     def patch(self, request, id=None):
-        item = models.Employee.objects.get(id=id)
-        serializer = serializers.EmployeeSerializer(
-            item, data=request.data, partial=True
-        )
+        item = models.Cars.objects.get(id=id)
+        serializer = serializers.CarsSerializer(item, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(
@@ -55,7 +53,7 @@ class CarViewset(APIView):
             )
 
     def delete(self, request, id=None):
-        item = models.Employee.objects.filter(id=id)
+        item = models.Cars.objects.filter(id=id)
         print(item)
         item.delete()
         return Response({"status": "success", "data": "Item Deleted"})
