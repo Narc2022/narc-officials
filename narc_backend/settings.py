@@ -74,18 +74,16 @@ WSGI_APPLICATION = "narc_backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "railway",
         "USER": "postgres",
-        "PASSWORD": "abc123",
-        "HOST": "containers-us-west-45.railway.app",
-        "PORT": "5432",
+        "PASSWORD": "RqHkiuGvjYMTgqepNDZEZyVJxiaQmEnS",
+        "HOST": "interchange.proxy.rlwy.net",
+        "PORT": "37860",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
