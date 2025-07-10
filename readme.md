@@ -16,8 +16,3 @@ venv\Scripts\activate
 
 <!-- create app/api route -->
 
-
-<!-- deployment refrence -->
-
-https://www.youtube.com/watch?v=k-OmuKuBSVY
-
