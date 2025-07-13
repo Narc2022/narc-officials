@@ -16,3 +16,21 @@ venv\Scripts\activate
 
 <!-- create app/api route -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.youtube.com/watch?v=fKp8XbVETk4
+
+32:00
